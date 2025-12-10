@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_ma.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 18:57:32 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/08 21:14:44 by tadeyelu         ###   ########.fr       */
+/*   Updated: 2025/12/10 22:18:47 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
 
-int ft_putnbr_hex(unsigned long n, int fd)
+static int ft_putnbr_hex(unsigned long n, int fd)
 {
 	char	*base;
 	int		count;
@@ -25,11 +25,25 @@ int ft_putnbr_hex(unsigned long n, int fd)
 	count++;
 	return (count);
 }
+ 
+int ft_putnbr_ma(unsigned long n, int fd)
+{
+	int	totallength;
+
+	write(fd, "0x", 2);
+	totallength = 2;
+
+	totallength += ft_putnbr_hex(n, fd);
+	return (totallength);
+}
 
 /*
 int main(void)
 {
-	printf("%lx\n", 140721120898156);
-	ft_putnbr_hex(140721120898156, 1);
+	int num = 4;
+
+	// 0x7ffd026a6d0c and 7ffd026a6d0c and 140724643982604
+	// printf("%p and %lx and %lu\n", &num, (unsigned long)&num, (unsigned long)&num);
+	ft_putnbr_ma(140724643982604, 1);
 }
 */
