@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_ma.c                                     :+:      :+:    :+:   */
+/*   ft_putcharint_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: temit <temit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 18:57:32 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/11 14:56:13 by temit            ###   ########.fr       */
+/*   Created: 2025/11/14 17:56:59 by tadeyelu          #+#    #+#             */
+/*   Updated: 2025/12/11 14:56:00 by temit            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_putnbr_hex(unsigned long n, int fd)
+int	ft_putcharint_fd(char c, int fd)
 {
-	char	*base;
-	int		count;
-
-	count = 0;
-	base = "0123456789abcdef";
-	if (n > 15)
-		count = count + ft_putnbr_hex(n / 16, fd);
-	ft_putchar_fd(base[n % 16], fd);
-	count++;
-	return (count);
-}
-
-int	ft_putnbr_ma(unsigned long n, int fd)
-{
-	int	totallength;
-
-	write(fd, "0x", 2);
-	totallength = 2;
-
-	totallength += ft_putnbr_hex(n, fd);
-	return (totallength);
+	return (write(fd, &c, 1));
 }

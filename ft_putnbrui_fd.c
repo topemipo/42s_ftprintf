@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbrui_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: temit <temit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 16:01:06 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/08 17:19:32 by tadeyelu         ###   ########.fr       */
+/*   Updated: 2025/12/11 14:56:29 by temit            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbrui_fd(unsigned int ln, int fd)
 {
