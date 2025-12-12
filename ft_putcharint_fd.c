@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putcharint_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: temit <temit@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:56:59 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/11 14:56:00 by temit            ###   ########.fr       */
+/*   Updated: 2025/12/12 16:31:51 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 int	ft_putcharint_fd(char c, int fd)
 {
-	return (write(fd, &c, 1));
+	write(fd, &c, 1);
+	return (1);
 }

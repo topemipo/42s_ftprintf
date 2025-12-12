@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_ma.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: temit <temit@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 18:57:32 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/11 14:56:13 by temit            ###   ########.fr       */
+/*   Updated: 2025/12/12 16:47:50 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_putnbr_hex(unsigned long n, int fd)
 	count = 0;
 	base = "0123456789abcdef";
 	if (n > 15)
-		count = count + ft_putnbr_hex(n / 16, fd);
+		count += ft_putnbr_hex(n / 16, fd);
 	ft_putchar_fd(base[n % 16], fd);
 	count++;
 	return (count);

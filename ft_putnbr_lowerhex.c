@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_lowerhex.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: temit <temit@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 18:57:32 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/11 14:56:07 by temit            ###   ########.fr       */
+/*   Updated: 2025/12/12 16:47:57 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_putnbr_lowerhex(unsigned int n, int fd)
 	count = 0;
 	base = "0123456789abcdef";
 	if (n > 15)
-		count = count + ft_putnbr_lowerhex(n / 16, fd);
-	ft_putchar_fd(ft_tolower(base[n % 16]), fd);
+		count += ft_putnbr_lowerhex(n / 16, fd);
+	ft_putchar_fd(base[n % 16], fd);
 	count++;
 	return (count);
 }

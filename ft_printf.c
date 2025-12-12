@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: temit <temit@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 09:24:23 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/11 15:20:46 by temit            ###   ########.fr       */
+/*   Updated: 2025/12/12 17:04:20 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	formatspecifier(char fs, va_list *extraargs)
 	return (charcounts);
 }
 
-/*
+
 int main(void)
 {
     char character = 'E';
@@ -80,7 +80,7 @@ int main(void)
 
     // The single printf call using all specifiers:
     printf("--- Test Case ---\n");
-    printf("Char: %c | String: %s | Pointer: %p | Decimal: %d | Integer: %i | Unsigned: %u | Hex_l: %x | Hex_U: %X | Percent: %%\n",
+    int x = printf("Char: %c | String: %s | Pointer: %p | Decimal: %d | Integer: %i | Unsigned: %u | Hex_l: %x | Hex_U: %X | Percent: %%\n",
            character,
            string,
            pointer,
@@ -89,7 +89,7 @@ int main(void)
            unsigned_int,
            hex_lower,
            hex_upper);
-    ft_printf("Char: %c | String: %s | Pointer: %p | Decimal: %d | Integer: %i | Unsigned: %u | Hex_l: %x | Hex_U: %X | Percent: %%",
+    int y = ft_printf("Char: %c | String: %s | Pointer: %p | Decimal: %d | Integer: %i | Unsigned: %u | Hex_l: %x | Hex_U: %X | Percent: %%\n",
     character,
     string,
     pointer,
@@ -98,9 +98,11 @@ int main(void)
     unsigned_int,
     hex_lower,
     hex_upper);
-    write(1, "\n", 1);
     printf("--- End Test ---\n");
+
+	ft_putnbr_fd(x, 1);
+	write(1, "\n", 1);
+	ft_putnbr_fd(y, 1);
 
     return 0;
 }
-*/
