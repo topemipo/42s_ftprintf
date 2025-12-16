@@ -1,32 +1,29 @@
-# 42s_ftprintf
-I'm hopping on my second project at 42's common core program and my gola is to simply make my own copy of the printf function in c
+This project has been created as part of the 42 curriculum by tadeyelu.
 
-Links that has helped so far: 
+# Description
+The goal of this project is to recode the printf() function from libc. Our recoded version must be able to handle these conversions:
+1. Char 
+2. String
+3. Pointers (unsinged long datatype that are later converted to hexadecimals)
+4. Decimals and Integers
+5. Unsinged Integers
+6. Unsigned Integers to Hexadecimals with the letters in either capital (X) or small (x) letters
 
-https://www.geeksforgeeks.org/c/variadic-functions-in-c/
-https://hackernoon.com/what-is-va_list-in-c-exploring-the-secrets-of-ft_printf
+The function should also obe able to return the total number of chars the function returned in the file descriptor.
+
+# Instructons
+To compile the library, simply run: ``` make ```<br>
+To clean object files: ``` make clean ``` <br>
+To clean all generated files ```make fclean ``` <br>
+To rebuild from scratch: ```make re ``` <br>
+
+## How to use the library
+Include the ft_printf.h header in your source file, then compile and link:
+```
+cc -Wall -Wextra -Werror main.c libftprintf.a
+./a.out
+```
 
 
-cc prac.c  
-
-ft_putnbrui_fd.c 
-ft_putnbr_ma.c 
-ft_putnbr_lowerhex.c 
-ft_putnbr_upperhex.c 
-
-libft/ft_putchar_fd.c 
-libft/ft_strlen.c 
-libft/ft_putstr_fd.c 
-libft/ft_putnbr_fd.c 
-libft/ft_itoa.c
-libft/ft_tolower.c
-libft/ft_toupper.c
-
-
-cc ftprintf.c ft_putnbrui_fd.c ft_putnbr_ma.c ft_putnbr_lowerhex.c ft_putnbr_upperhex.c libft/ft_putchar_fd.c libft/ft_strlen.c libft/ft_putstr_fd.c libft/ft_putnbr_fd.c libft/ft_itoa.c libft/ft_tolower.c libft/ft_toupper.c ft_putcharint_fd.c ft_putstrint_fd.c
-
-cc ft_printf.c ft_putcharint_fd.c ft_putstrint_fd.c ft_putnbr_ma.c ft_putnbrint_fd.c ft_putnbrui_fd.c ft_putnbr_lowerhex.c ft_putnbr_upperhex.c libft/ft_putchar_fd.c libft/ft_tolower.c libft/ft_toupper.c
-
-From libft, i only used putchar, tolower and toupper functions
-
-https://wiki.sei.cmu.edu/confluence/display/c/MSC39-C.+Do+not+call+va_arg%28%29+on+a+va_list+that+has+an+indeterminate+value
+# Resources
+Here are some resources i used to understand the concept of variadic functions in C: [Link 1](https://wiki.sei.cmu.edu/confluence/display/c/MSC39-C.+Do+not+call+va_arg%28%29+on+a+va_list+that+has+an+indeterminate+value), [Link 2](https://www.geeksforgeeks.org/c/variadic-functions-in-c/), [Link 3](https://hackernoon.com/what-is-va_list-in-c-exploring-the-secrets-of-ft_printf).

@@ -6,7 +6,7 @@
 /*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 09:24:23 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/12 17:04:20 by tadeyelu         ###   ########.fr       */
+/*   Updated: 2025/12/16 13:31:13 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,45 +64,4 @@ static int	formatspecifier(char fs, va_list *extraargs)
 		charcounts++;
 	}
 	return (charcounts);
-}
-
-
-int main(void)
-{
-    char character = 'E';
-    char *string = "xample";
-    int decimal = 42;
-    int integer = 1977;
-    unsigned int unsigned_int = 15000;
-    void *pointer = &unsigned_int; // Get the address of a variable
-    int hex_lower = 255;
-    int hex_upper = 255;
-
-    // The single printf call using all specifiers:
-    printf("--- Test Case ---\n");
-    int x = printf("Char: %c | String: %s | Pointer: %p | Decimal: %d | Integer: %i | Unsigned: %u | Hex_l: %x | Hex_U: %X | Percent: %%\n",
-           character,
-           string,
-           pointer,
-           decimal,
-           integer,
-           unsigned_int,
-           hex_lower,
-           hex_upper);
-    int y = ft_printf("Char: %c | String: %s | Pointer: %p | Decimal: %d | Integer: %i | Unsigned: %u | Hex_l: %x | Hex_U: %X | Percent: %%\n",
-    character,
-    string,
-    pointer,
-    decimal,
-    integer,
-    unsigned_int,
-    hex_lower,
-    hex_upper);
-    printf("--- End Test ---\n");
-
-	ft_putnbr_fd(x, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(y, 1);
-
-    return 0;
 }
