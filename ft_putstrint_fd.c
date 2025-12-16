@@ -6,7 +6,7 @@
 /*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 16:59:51 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/12 16:46:49 by tadeyelu         ###   ########.fr       */
+/*   Updated: 2025/12/16 17:15:12 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int	ft_putstrint_fd(char *s, int fd)
 	size_t	i;
 
 	if (!s)
-		return (0);
+	{
+		write (fd, "(null)", 6);
+		return (6);
+	}
 	i = 0;
 	while (s[i])
 	{

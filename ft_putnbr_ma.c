@@ -6,7 +6,7 @@
 /*   By: tadeyelu <tadeyelu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 18:57:32 by tadeyelu          #+#    #+#             */
-/*   Updated: 2025/12/16 12:28:11 by tadeyelu         ###   ########.fr       */
+/*   Updated: 2025/12/16 17:38:23 by tadeyelu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ static int	ft_putnbr_hex(unsigned long n, int fd)
 int	ft_putnbr_ma(unsigned long n, int fd)
 {
 	int	totallength;
-
+	if (!n)
+	{
+		write(fd, "(nil)", 5);
+		return(5);
+	}
 	write(fd, "0x", 2);
 	totallength = 2;
 	totallength += ft_putnbr_hex(n, fd);
