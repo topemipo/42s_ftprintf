@@ -29,7 +29,7 @@ cc -Wall -Wextra -Werror main.c libftprintf.a
 Here are some resources i used to understand the concept of variadic functions in C: [Link 1](https://wiki.sei.cmu.edu/confluence/display/c/MSC39-C.+Do+not+call+va_arg%28%29+on+a+va_list+that+has+an+indeterminate+value), [Link 2](https://www.geeksforgeeks.org/c/variadic-functions-in-c/), [Link 3](https://hackernoon.com/what-is-va_list-in-c-exploring-the-secrets-of-ft_printf).
 
 
-# Others
-1. While i was testing, i realised when a null is passed into the printf in place of a string format specifier, it's supposed to return "(null)"
-2. Same issue for the pointer format specifier, i didn't handle when null is passed as a pointer into my printf
-3. For the function handling, %d and %i, it wsn't handling the edge case of INT_MIN and 0. I also corrected the fact that i wasn't incrementing for the negative sign. So when i passed in a negative number, my printf count was off by one char.
+# Corrections
+1. While i was testing, i realised when a null is passed into the printf in place of a string format specifier, it's supposed to return "(null)".
+2. Same issue for the pointer format specifier, i didn't handle when null is passed as a pointer into my printf.
+3. For the function handling, %d and %i, it wsn't handling the edge case of INT_MIN (i was casting to long and that's wrong) and 0. I also corrected the fact that i wasn't incrementing for the negative sign. So when i passed in a negative number, my printf count was off by one char. 
